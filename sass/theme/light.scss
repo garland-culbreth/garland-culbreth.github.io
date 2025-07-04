@@ -1,0 +1,22 @@
+$bg-0: #F3F4F5;
+$bg-1: darken($bg-0, 3%);
+$bg-2: darken($bg-1, 5%);
+
+$text-0: #5C6166;
+$text-1: #787B80cc;
+$text-2: #787B80cc;
+
+:root.light {
+  --text-0: #{$text-0};
+  --text-1: #{$text-1};
+  --text-2: #{$text-2};
+
+  --bg-0: #{$bg-0};
+  --bg-1: #{$bg-1};
+  --bg-2: #{$bg-2};
+
+  --border-color: var(--bg-2);
+
+  --primary-color: #a040ffad;
+  --hover-color: black;
+}

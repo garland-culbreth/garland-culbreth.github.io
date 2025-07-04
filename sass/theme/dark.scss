@@ -1,0 +1,28 @@
+$bg-0: #1F2430;
+
+// Dark theme needs a bigger contrast compared to the white theme.
+$bg-1: lighten($bg-0, 5%);
+$bg-2: lighten($bg-1, 5%);
+
+$text-0: #CCCAC2;
+$text-1: #B8CFE680;
+$text-2: #B8CFE680;
+
+:root.dark {
+  --text-0: #{$text-0};
+  --text-1: #{$text-1};
+  --text-2: #{$text-2};
+
+  --bg-0: #{$bg-0};
+  --bg-1: #{$bg-1};
+  --bg-2: #{$bg-2};
+
+  --border-color: var(--bg-2);
+
+  --primary-color: #a040ffad;
+  --hover-color: white;
+
+  .social > img, .search-button > img {
+    filter: invert(1);
+  }
+}
