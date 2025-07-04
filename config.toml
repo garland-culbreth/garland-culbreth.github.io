@@ -1,5 +1,6 @@
 title = "garland-culbreth"
 base_url = "https://garland-culbreth.github.io"
+theme = "artemis"
 build_search_index = false
 generate_feeds = true
 compile_sass = true
