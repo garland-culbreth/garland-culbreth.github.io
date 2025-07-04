@@ -1,0 +1,34 @@
+title = "garland-culbreth"
+base_url = "https://garland-culbreth.github.io"
+theme = "artemis"
+build_search_index = false
+generate_feeds = true
+compile_sass = true
+minify_html = true
+taxonomies = [{ name = "tags" }]
+
+[markdown]
+highlight_code = true
+highlight_theme = "css"
+highlight_themes_css = [
+  { theme = "ayu-dark", filename = "syntax-theme-dark.css" },
+  { theme = "ayu-light", filename = "syntax-theme-light.css" },
+]
+
+[extra]
+theme = "toggle"
+fancy_code = true
+dynamic_note = true
+mathjax = true
+mathjax_dollar_inline_enable = true
+socials = [
+  {name = "LinkedIn", url = "https://linkedin.com/in/garland-culbreth", icon = "linkedin"},
+  {name = "GitHub", url = "https://github.com/garland-culbreth", icon = "github"},
+  {name = "ORCiD", url = "https://orcid.org/0000-0002-3096-4834", icon = "orcid"},
+]
+menu = [
+  { name = "/about", url = "/about", weight = 3 },
+  { name = "/projects", url = "/projects", weight = 2 },
+  { name = "/posts", url = "/posts", weight = 1 },
+  { name = "/tags", url = "/tags", weight = 4 },
+]
