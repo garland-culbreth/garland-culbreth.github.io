@@ -16,7 +16,7 @@
   --border-color: var(--border-color);
 
   /* Fonts */
-  --font-size-base: 15px;
+  --font-size-base: 18px;
   --mono-text-font: "Aeon Mono";
   --text-font: "Aeon";
   --header-font: "Aeon", "Helvetica", sans-serif;
@@ -42,6 +42,7 @@ body {
   margin-left: auto;
   margin-right: auto;
   min-height: calc(100vh - 150px);
+  font-size: var(--font-size-base);
 
   .content {
     width: 100%;
