@@ -228,14 +228,14 @@
     /**
      * A function for splitting a string into tokens.
      * Currently English is supported as default.
-     * Uses `elasticlunr.tokenizer.seperator` to split strings, you could change
+     * Uses `elasticlunr.tokenizer.separator` to split strings, you could change
      * the value of this property to set how you want strings are split into tokens.
-     * IMPORTANT: use elasticlunr.tokenizer.seperator carefully, if you are not familiar with
+     * IMPORTANT: use elasticlunr.tokenizer.separator carefully, if you are not familiar with
      * text process, then you'd better not change it.
      *
      * @module
      * @param {String} str The string that you want to tokenize.
-     * @see elasticlunr.tokenizer.seperator
+     * @see elasticlunr.tokenizer.separator
      * @return {Array}
      */
     elasticlunr.tokenizer = function (str) {
@@ -255,7 +255,7 @@
 
             let out = [];
             arr.forEach(function (item) {
-                const tokens = item.split(elasticlunr.tokenizer.seperator);
+                const tokens = item.split(elasticlunr.tokenizer.separator);
                 out = out.concat(tokens);
             }, this);
 
@@ -266,13 +266,13 @@
             .toString()
             .trim()
             .toLowerCase()
-            .split(elasticlunr.tokenizer.seperator);
+            .split(elasticlunr.tokenizer.separator);
     };
 
     /**
-     * Default string seperator.
+     * Default string separator.
      */
-    elasticlunr.tokenizer.defaultSeperator = /[\s-]+/;
+    elasticlunr.tokenizer.defaultSeparator = /[\s-]+/;
 
     /**
      * The sperator used to split a string into tokens. Override this property to change the behaviour of
@@ -281,33 +281,33 @@
      * @static
      * @see elasticlunr.tokenizer
      */
-    elasticlunr.tokenizer.seperator = elasticlunr.tokenizer.defaultSeperator;
+    elasticlunr.tokenizer.separator = elasticlunr.tokenizer.defaultSeparator;
 
     /**
-     * Set up customized string seperator
+     * Set up customized string separator
      *
-     * @param {Object} sep The customized seperator that you want to use to tokenize a string.
+     * @param {Object} sep The customized separator that you want to use to tokenize a string.
      */
-    elasticlunr.tokenizer.setSeperator = function (sep) {
+    elasticlunr.tokenizer.setSeparator = function (sep) {
         if (sep !== null && sep !== undefined && typeof sep === 'object') {
-            elasticlunr.tokenizer.seperator = sep;
+            elasticlunr.tokenizer.separator = sep;
         }
     };
 
     /**
-     * Reset string seperator
+     * Reset string separator
      *
      */
-    elasticlunr.tokenizer.resetSeperator = function () {
-        elasticlunr.tokenizer.seperator = elasticlunr.tokenizer.defaultSeperator;
+    elasticlunr.tokenizer.resetSeparator = function () {
+        elasticlunr.tokenizer.separator = elasticlunr.tokenizer.defaultSeparator;
     };
 
     /**
-     * Get string seperator
+     * Get string separator
      *
      */
-    elasticlunr.tokenizer.getSeperator = function () {
-        return elasticlunr.tokenizer.seperator;
+    elasticlunr.tokenizer.getSeparator = function () {
+        return elasticlunr.tokenizer.separator;
     };
     /*!
      * elasticlunr.Pipeline
@@ -1034,8 +1034,8 @@
                     docs = filteredDocs;
                 }
                 // only record appeared token for retrieved documents for the
-                // original token, not for expaned token.
-                // beause for doing coordNorm for a retrieved document, coordNorm only care how many
+                // original token, not for expanded token.
+                // because for doing coordNorm for a retrieved document, coordNorm only care how many
                 // query token appear in that document.
                 // so expanded token should not be added into docTokens, if added, this will pollute the
                 // coordNorm
@@ -1054,15 +1054,15 @@
                         fieldLengthNorm = 1 / Math.sqrt(fieldLength);
                     }
 
-                    let penality = 1;
+                    let penalty = 1;
                     if (key !== token) {
-                        // currently I'm not sure if this penality is enough,
+                        // currently I'm not sure if this penalty is enough,
                         // need to do verification
-                        penality =
+                        penalty =
                             (1 - (key.length - token.length) / key.length) * 0.15;
                     }
 
-                    const score = tf * idf * fieldLengthNorm * penality;
+                    const score = tf * idf * fieldLengthNorm * penalty;
 
                     if (docRef in queryTokenScores) {
                         queryTokenScores[docRef] += score;
@@ -1116,7 +1116,7 @@
     };
 
     /**
-     * Record the occuring query token of retrieved doc specified by doc field.
+     * Record the occurring query token of retrieved doc specified by doc field.
      * Only for inner user.
      *
      * @param {Object} docTokens a data structure stores which token appears in the retrieved doc.
@@ -1444,7 +1444,7 @@
             ator: 'ate',
             alism: 'al',
             iveness: 'ive',
-            fulness: 'ful',
+            fulness: 'full',
             ousness: 'ous',
             aliti: 'al',
             iviti: 'ive',
@@ -1458,7 +1458,7 @@
             alize: 'al',
             iciti: 'ic',
             ical: 'ic',
-            ful: '',
+            full: '',
             ness: '',
         };
 
@@ -1490,10 +1490,10 @@
         const re_2 =
             /^(.+?)(ational|tional|enci|anci|izer|bli|alli|entli|eli|ousli|ization|ation|ator|alism|iveness|fulness|ousness|aliti|iviti|biliti|logi)$/;
 
-        const re_3 = /^(.+?)(icate|ative|alize|iciti|ical|ful|ness)$/;
+        const re_3 = /^(.+?)(icate|ative|alize|iciti|ical|full|ness)$/;
 
         const re_4 =
-            /^(.+?)(al|ance|ence|er|ic|able|ible|ant|ement|ment|ent|ou|ism|ate|iti|ous|ive|ize)$/;
+            /^(.+?)(al|ance|ence|er|ic|able|ible|ant|ement|meant|ent|ou|ism|ate|iti|ous|ive|ize)$/;
         const re2_4 = /^(.+?)(s|t)(ion)$/;
 
         const re_5 = /^(.+?)e$/;
@@ -1831,7 +1831,7 @@
 
     /**
      * elasticlunr.trimmer is a pipeline function for trimming non word
-     * characters from the begining and end of tokens before they
+     * characters from the beginning and end of tokens before they
      * enter the index.
      *
      * This implementation may not work correctly for non latin
@@ -1886,7 +1886,7 @@
      * If the token already exist, then update the tokenInfo.
      *
      * tokenInfo format: { ref: 1, tf: 2}
-     * tokenInfor should contains the document's ref and the tf(token frequency) of that token in
+     * tokenInfo should contains the document's ref and the tf(token frequency) of that token in
      * the document.
      *
      * By default this function starts at the root of the current inverted index, however
@@ -2099,13 +2099,13 @@
      *
      * Currently configuration supports:
      * 1. query-time boosting, user could set how to boost each field.
-     * 2. boolean model chosing, user could choose which boolean model to use for each field.
+     * 2. boolean model choosing, user could choose which boolean model to use for each field.
      * 3. token expandation, user could set token expand to True to improve Recall. Default is False.
      *
      * Query time boosting must be configured by field category, "boolean" model could be configured
      * by both field category or globally as the following example. Field configuration for "boolean"
      * will overwrite global configuration.
-     * Token expand could be configured both by field category or golbally. Local field configuration will
+     * Token expand could be configured both by field category or globally. Local field configuration will
      * overwrite global configuration.
      *
      * configuration example:
@@ -2117,7 +2117,7 @@
      *   bool: "OR"
      * }
      *
-     * "bool" field configuation overwrite global configuation example:
+     * "bool" field configuration overwrite global configuration example:
      * {
      *   fields:{
      *     title: {boost: 2, bool: "AND"},
@@ -2548,7 +2548,7 @@
         } else if (typeof exports === 'object') {
             /**
              * Node. Does not work with strict CommonJS, but
-             * only CommonJS-like enviroments that support module.exports,
+             * only CommonJS-like environments that support module.exports,
              * like Node.
              */
             module.exports = factory();
@@ -2747,8 +2747,8 @@ window.onload = function () {
         // Binary system, starts with `0b` in ES6
         // Octal number system, starts with `0` in ES5 and starts with `0o` in ES6
         // Hexadecimal, starts with `0x` in both ES5 and ES6
-        var byteLengthDatas = [0, 1, 2, 3, 4];
-        var len = byteLengthDatas[Math.ceil(binaryCode.length / 8)];
+        var byteLengthData = [0, 1, 2, 3, 4];
+        var len = byteLengthData[Math.ceil(binaryCode.length / 8)];
         return len;
     }
 

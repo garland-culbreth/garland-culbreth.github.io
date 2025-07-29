@@ -26,7 +26,7 @@ template = "homepage.html"
 
 # Features
 
-- [Light, dark, and auto themes](/posts/configuration#theme-mode-theme)  
+- [Light, dark, and auto themes](/posts/configuration#theme-mode-theme)
 - [Projects page](/projects/)
 - [Talks page](https://not-matthias.github.io/talks/)
 - [Analytics (GoatCounter, Umami)](/posts/configuration#analytics)
