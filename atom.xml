@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title>garland-culbreth</title>
+    <link rel="self" type="application/atom+xml" href="https://garland-culbreth.github.io/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://garland-culbreth.github.io"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2025-06-29T00:00:00+00:00</updated>
+    <id>https://garland-culbreth.github.io/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Keeping my YAML sanity</title>
+        <published>2025-06-29T00:00:00+00:00</published>
+        <updated>2025-06-29T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://garland-culbreth.github.io/posts/my-yaml-rules/"/>
+        <id>https://garland-culbreth.github.io/posts/my-yaml-rules/</id>
+        
+        <content type="html" xml:base="https://garland-culbreth.github.io/posts/my-yaml-rules/">&lt;p&gt;I work with a lot of YAML configuration files in my day to day. Although they&#x27;re convenient most of the time, YAML&#x27;s pitfalls still wind me up occasionally. So I made some personal rules to follow.&lt;&#x2F;p&gt;
+&lt;p&gt;Most of these are motivated by &lt;a href=&quot;https:&#x2F;&#x2F;hitchdev.com&#x2F;strictyaml&#x2F;features-removed&#x2F;&quot;&gt;StrictYAML&#x27;s motivations for removing YAML&#x27;s most pitfall-creating features&lt;&#x2F;a&gt;, and are supposed to mitigate pitfalls introduced by YAML&#x27;s implicit typing. I don&#x27;t find automatic typing more human-readable or otherwise helpful, and it opens up all sorts of opportunities for unexpected behavior.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;always-use-safe-loading&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#always-use-safe-loading&quot; aria-label=&quot;Anchor link for: always-use-safe-loading&quot;&gt;Always use safe loading&lt;&#x2F;a&gt;&lt;&#x2F;h1&gt;
+&lt;p&gt;YAML doesn&#x27;t sanitize inputs, meaning there&#x27;s a risk that arbitrary code could be executed when loading the YAML unless using safe loading. With Python&#x27;s &lt;code&gt;pyyaml&lt;&#x2F;code&gt; for example, just always load YAML with &lt;code&gt;yaml.safe_load()&lt;&#x2F;code&gt;.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;always-put-strings-in-quotes&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#always-put-strings-in-quotes&quot; aria-label=&quot;Anchor link for: always-put-strings-in-quotes&quot;&gt;Always put strings in quotes&lt;&#x2F;a&gt;&lt;&#x2F;h1&gt;
+&lt;p&gt;YAML doesn&#x27;t require string-typed values to be surrounded in quotes. Both values in the following block read in as strings:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;yml&quot; class=&quot;language-yml z-code&quot;&gt;&lt;code class=&quot;language-yml&quot; data-lang=&quot;yml&quot;&gt;&lt;span class=&quot;z-source z-yaml&quot;&gt;&lt;span class=&quot;z-string z-unquoted z-plain z-out z-yaml&quot;&gt;&lt;span class=&quot;z-entity z-name z-tag z-yaml&quot;&gt;one&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-punctuation z-separator z-key-value z-mapping z-yaml&quot;&gt;:&lt;&#x2F;span&gt; &lt;span class=&quot;z-string z-unquoted z-plain z-out z-yaml&quot;&gt;Stuff&lt;&#x2F;span&gt;
+&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-yaml&quot;&gt;&lt;span class=&quot;z-string z-unquoted z-plain z-out z-yaml&quot;&gt;&lt;span class=&quot;z-entity z-name z-tag z-yaml&quot;&gt;two&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-punctuation z-separator z-key-value z-mapping z-yaml&quot;&gt;:&lt;&#x2F;span&gt; &lt;span class=&quot;z-string z-quoted z-double z-yaml&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-string z-begin z-yaml&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;Things&lt;span class=&quot;z-punctuation z-definition z-string z-end z-yaml&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;If the string contains special characters but isn&#x27;t surrounded in &lt;code&gt;&quot;&quot;&lt;&#x2F;code&gt; quotes, YAML might read it in strangely. This also helps ensure number-like strings aren&#x27;t interpreted as real numbers:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;yml&quot; class=&quot;language-yml z-code&quot;&gt;&lt;code class=&quot;language-yml&quot; data-lang=&quot;yml&quot;&gt;&lt;span class=&quot;z-source z-yaml&quot;&gt;&lt;span class=&quot;z-comment z-line z-number-sign z-yaml&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-comment z-line z-number-sign z-yaml&quot;&gt;#&lt;&#x2F;span&gt; Do
+&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-yaml&quot;&gt;&lt;span class=&quot;z-string z-unquoted z-plain z-out z-yaml&quot;&gt;&lt;span class=&quot;z-entity z-name z-tag z-yaml&quot;&gt;version&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-punctuation z-separator z-key-value z-mapping z-yaml&quot;&gt;:&lt;&#x2F;span&gt; &lt;span class=&quot;z-string z-quoted z-double z-yaml&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-string z-begin z-yaml&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;1.2&lt;span class=&quot;z-punctuation z-definition z-string z-end z-yaml&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-yaml&quot;&gt;
+&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-yaml&quot;&gt;&lt;span class=&quot;z-comment z-line z-number-sign z-yaml&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-comment z-line z-number-sign z-yaml&quot;&gt;#&lt;&#x2F;span&gt; Don&amp;#39;t
+&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-yaml&quot;&gt;&lt;span class=&quot;z-string z-unquoted z-plain z-out z-yaml&quot;&gt;&lt;span class=&quot;z-entity z-name z-tag z-yaml&quot;&gt;version&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-punctuation z-separator z-key-value z-mapping z-yaml&quot;&gt;:&lt;&#x2F;span&gt; &lt;span class=&quot;z-constant z-numeric z-float z-decimal z-yaml&quot;&gt;1&lt;span class=&quot;z-punctuation z-separator z-decimal z-yaml&quot;&gt;.&lt;&#x2F;span&gt;2&lt;&#x2F;span&gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;YAML interprets the unquoted value as a number, but you need to pass it as a string you have to quote it and if you forget unexpected results can ensue.&lt;&#x2F;p&gt;
+&lt;p&gt;Annoyingly, YAML interprets single quotes &lt;code&gt;&#x27;&#x27;&lt;&#x2F;code&gt; and double quotes &lt;code&gt;&quot;&quot;&lt;&#x2F;code&gt; differently, which is a whole other problem. So unless there&#x27;s a specific syntactic need, just always use double quotes.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;use-only-true-and-false-for-booleans&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#use-only-true-and-false-for-booleans&quot; aria-label=&quot;Anchor link for: use-only-true-and-false-for-booleans&quot;&gt;Use only &lt;code&gt;true&lt;&#x2F;code&gt; and &lt;code&gt;false&lt;&#x2F;code&gt; for Booleans&lt;&#x2F;a&gt;&lt;&#x2F;h1&gt;
+&lt;p&gt;See &lt;a href=&quot;https:&#x2F;&#x2F;hitchdev.com&#x2F;strictyaml&#x2F;why&#x2F;implicit-typing-removed&#x2F;&quot;&gt;YAML&#x27;s Norway problem&lt;&#x2F;a&gt;. YAML permits &lt;code&gt;no&lt;&#x2F;code&gt;, &lt;code&gt;No&lt;&#x2F;code&gt;, and &lt;code&gt;NO&lt;&#x2F;code&gt; as acceptable Boolean keywords, translating them to &lt;code&gt;false&lt;&#x2F;code&gt;. But &lt;code&gt;&quot;NO&quot;&lt;&#x2F;code&gt; is the ISO 639 Alpha-2 code for the Norwegian language. YAML&#x27;s automatic typing will happily break your configuration because you added better accessibility. So just never use anything but &lt;code&gt;true&lt;&#x2F;code&gt; and &lt;code&gt;false&lt;&#x2F;code&gt;.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;use-only-null-for-null-values&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#use-only-null-for-null-values&quot; aria-label=&quot;Anchor link for: use-only-null-for-null-values&quot;&gt;Use only &lt;code&gt;null&lt;&#x2F;code&gt; for null values&lt;&#x2F;a&gt;&lt;&#x2F;h1&gt;
+&lt;p&gt;YAML permits &lt;code&gt;null&lt;&#x2F;code&gt;, &lt;code&gt;Null&lt;&#x2F;code&gt;, and &lt;code&gt;NULL&lt;&#x2F;code&gt;, along with &lt;code&gt;~&lt;&#x2F;code&gt;, for indicating null values. For consistency always use &lt;code&gt;null&lt;&#x2F;code&gt;. YAML really seems to love maximalism, I have no idea why.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;keep-anchors-and-references-to-a-minimum&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#keep-anchors-and-references-to-a-minimum&quot; aria-label=&quot;Anchor link for: keep-anchors-and-references-to-a-minimum&quot;&gt;Keep anchors and references to a minimum&lt;&#x2F;a&gt;&lt;&#x2F;h1&gt;
+&lt;p&gt;Anchors can be convenient but if you find yourself using a lot of them that&#x27;s probably a sign you should re-think your configuration structure and design it better.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Discord axioms for dev</title>
+        <published>2025-06-28T00:00:00+00:00</published>
+        <updated>2025-06-28T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://garland-culbreth.github.io/posts/discord-axioms/"/>
+        <id>https://garland-culbreth.github.io/posts/discord-axioms/</id>
+        
+        <content type="html" xml:base="https://garland-culbreth.github.io/posts/discord-axioms/">&lt;p&gt;I  detest being told to join a Discord server when I have a question that could be easily answered by a documentation page or a proper issue tracker. So I made some axioms:&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
+&lt;ol&gt;
+&lt;li&gt;Discord isn&#x27;t documentation.&lt;&#x2F;li&gt;
+&lt;li&gt;Discord isn&#x27;t change logging.&lt;&#x2F;li&gt;
+&lt;li&gt;Discord isn&#x27;t issue tracking.&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;hr &#x2F;&gt;
+&lt;p&gt;Use a publicly accessible, search indexed, platform for these things; never a hidden members-only platform.&lt;&#x2F;p&gt;
+&lt;p&gt;To me Discord&#x27;s like IRC with a pretty GUI and voice channels. It&#x27;s nice for conversation and chatting but really not suited for record keeping. The moment a conversation turns to something that should be properly recorded for future reference, it should be moved somewhere that&#x27;s possible. And that isn&#x27;t possible in Discord.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+</feed>
