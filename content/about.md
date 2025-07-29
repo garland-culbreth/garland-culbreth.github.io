@@ -5,7 +5,7 @@ path = "about"
 
 # My background
 
-I graduated in 2021 with a PhD in theoretical physics from the University of North Texas, where I studied complex systems, nonlinear dynamics, and stochastic processes. I built a computational model of echo chamber formation on social networks undergoing  information diffusion coupled with reinforcment learning dynamics; investigating formation conditions and disruption strategies. I've also built agent-based models and studied swarm intelligence. My expertise is in applying the theory of complex systems, sochastic processes, nonlinear dynamics, and reinforcement learning to real-world problems by building numerical software, reinforcment learning models, and simulations.
+I graduated in 2021 with a PhD in theoretical physics from the University of North Texas, where I studied complex systems, nonlinear dynamics, and stochastic processes. I built a computational model of echo chamber formation on social networks undergoing  information diffusion coupled with reinforcment learning dynamics; investigating formation conditions and disruption strategies. I've also built agent-based models and studied swarm intelligence. My expertise is in applying the theory of complex systems, stochastic processes, nonlinear dynamics, and reinforcement learning to real-world problems by building numerical software, reinforcement learning models, and simulations.
 
 # My experience
 
