@@ -5,7 +5,7 @@ path = "about"
 
 # My background
 
-I graduated in 2021 with a PhD in theoretical physics from the University of North Texas, where I studied complex systems, nonlinear dynamics, and stochastic processes. I built a computational model of echo chamber formation on social networks undergoing  information diffusion coupled with reinforcment learning dynamics; investigating formation conditions and disruption strategies. I've also built agent-based models and studied swarm intelligence. My expertise is in applying the theory of complex systems, stochastic processes, nonlinear dynamics, and reinforcement learning to real-world problems by building numerical software, reinforcement learning models, and simulations.
+I graduated in 2021 with a PhD in theoretical physics from the University of North Texas, where I studied complex systems, stochastic processes, and nonlinear dynamics. I built a computational model of polarization and synchronization in networks experiencing information diffusion coupled with reinforcment learning dynamics. I applied this model to study echo chamber formation and disruption strategies. I also built agent-based models and studied swarm intelligence. My expertise is in applying theory to real-world problems by building numerical software, reinforcement learning models, and simulations.
 
 # My experience
 
@@ -13,7 +13,7 @@ Since 2021 I've worked at the Institute for Health Metrics and Evaluation at the
 
 # My programming
 
-I'm proficient in several programming languages, including 6 years of experience with Python, 4 with R, 4 with SQL, and 1 with Rust. I maintain several open-source Python packages for simulating complex systems and time-series analysis techniques.
+I'm proficient in several programming languages, including 6 years of experience with Python, 4 with R, 4 with SQL, 1 with C++, and 1 with Rust. I maintain several open-source Python packages for simulating complex systems and time-series analysis techniques.
 
 # My interests
 
