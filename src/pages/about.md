@@ -3,35 +3,33 @@ layout: ../layouts/AboutLayout.astro
 title: "About"
 ---
 
-AstroPaper is a minimal, accessible and SEO-friendly blog theme built with [Astro](https://astro.build/) and [Tailwind CSS](https://tailwindcss.com/).
+## About me
 
-![Astro Paper](public/astropaper-og.jpg)
+I graduated in 2021 with a PhD in theoretical physics from the University of North Texas, where I studied complex systems, stochastic processes, and nonlinear dynamics.
 
-AstroPaper provides a solid foundation for blogs, or even portfolios\_ with full markdown support, built-in dark mode, and a clean layout that works out-of-the-box.
 
-The blog posts in this theme also serve as guides, docs or example articles\_ making AstroPaper a flexible starting point for your next content-driven site.
+I advanced and optimized entropy based time series analysis methods to study swarm intelligence and collective behavior, achiving a 100x efficiency increase over earlier prototypes while improving signal resolution.
 
-## Features
+I built adaptive network models using reinforcment learning dynamics to simulate polarization and synchronization on networks experiencing information diffusion, and applied those models to study echo chamber formation and disruption strategies.
 
-AstroPaper comes with a set of useful features that make content publishing easy and effective:
+My expertise is in applying theory to real-world problems by building numerical software, reinforcement learning models, and simulations.
 
-- SEO-friendly
-- Fast performance
-- Light & dark mode
-- Highly customizable
-- Organizable blog posts
-- Responsive & accessible
-- Static search with [PageFind](https://pagefind.app/)
-- Automatic social image generation
+## My experience
 
-and so much more.
+Since 2021 I've worked at the Institute for Health Metrics and Evaluation at the University of Washington, developing and deploying the next generation of disease modeling software for the Global Burden of Disease project. I build new models, run terabyte-scale data pipelines, produce data visualizations for presenting crucial results to senior leadership and key stakeholders, and publish articles in top-tier journals, such as _The Lancet_.
 
-## Show your support
+I developed, integrated, and maintained IHME's first automated quality assurance pipeline, ensuring that estimates consistently achieve world-leading accuracy, rigor, and explainability, gaining recognition from senior leadership.
 
-If you like [AstroPaper](https://github.com/satnaing/astro-paper), consider giving it a star ⭐️.
+I maintain several open-source Python packages for simulating complex systems and time-series analysis techniques.
 
-Found a bug 🐛 or have an improvement ✨ in mind? Feel free to open an [issue](https://github.com/satnaing/astro-paper/issues), submit a [pull request](https://github.com/satnaing/astro-paper/pulls) or start a [discussion](https://github.com/satnaing/astro-paper/discussions).
+## Programming languages
 
-If you find this theme helpful, you can also [sponsor me on GitHub](https://github.com/sponsors/satnaing) or [buy me a coffee](https://buymeacoffee.com/satnaing) to show your support — every penny counts.
+- **Python** :: 6 yrs
+- **R** :: 4 yrs
+- **SQL** :: 4 yrs
+- **C/C++** :: 1yr
+- **Rust** :: 1 yr
 
-Kyay zuu! 🙏🏼
+## Research interests
+
+Complex systems, stochastic processes, reinforcement learning, numerical modeling and simulation, and solving real-world problems that defy simplification.
