@@ -3,7 +3,7 @@ layout: ../layouts/AboutLayout.astro
 title: "About"
 ---
 
-## About me
+## My background
 
 I graduated in 2021 with a PhD in theoretical physics from the University of North Texas, where I studied complex systems, stochastic processes, and nonlinear dynamics.
 
