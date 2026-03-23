@@ -69,4 +69,4 @@ _Be honest with yourself about what you created and what the machine generated._
 
 
 ---
-<p style="font-size:75%;"> Save travels, Anna. You are forever missed. </p>
+<p style="font-size:85%;"> Save travels, Anna. You are forever missed. </p>
