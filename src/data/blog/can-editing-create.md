@@ -55,7 +55,7 @@ No amount of editing is enough to become creation.
 
 Being responsible for something is different than it being your own work. Lots of people take responsibility for things they didn't personally create.
 
-From the beginning, the author of the Rust Project blog post took full responsibility for it and always acted in good faith. They were hurt by the response, which at times was sharp, because they cared. But the readers also felt hurt, because they felt they've been strung along and deceived. 
+From the beginning, the author of the Rust Project blog post took full responsibility for it and always acted in good faith. They were hurt by the response, which at times was sharp, because they cared. But the readers also felt hurt, because they felt deceived. 
 
 I always prefer to have someone disclose when they used an LLM to generate anything. That's certainly better than concealing it and readers figuring out that you did because your LLM was leaking.
 
