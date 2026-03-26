@@ -8,9 +8,9 @@ title: "About"
 I graduated in 2021 with a PhD in theoretical physics from the University of North Texas, where I studied complex systems, stochastic processes, and nonlinear dynamics.
 
 
-I advanced and optimized entropy based time series analysis methods to study swarm intelligence and collective behavior, achiving a 100x efficiency increase over earlier prototypes while improving signal resolution.
+I advanced and optimized entropy based time series analysis methods to study swarm intelligence and collective behavior, achieving a 100x efficiency increase over earlier prototypes while improving signal resolution.
 
-I built adaptive network models using reinforcment learning dynamics to simulate polarization and synchronization on networks experiencing information diffusion, and applied those models to study echo chamber formation and disruption strategies.
+I built adaptive network models using reinforcement learning dynamics to simulate polarization and synchronization on networks experiencing information diffusion, and applied those models to study echo chamber formation and disruption strategies.
 
 My expertise is in applying theory to real-world problems by building numerical software, reinforcement learning models, and simulations.
 
@@ -18,7 +18,7 @@ My expertise is in applying theory to real-world problems by building numerical 
 
 Since 2021 I've worked at the Institute for Health Metrics and Evaluation at the University of Washington, developing and deploying the next generation of disease modeling software for the Global Burden of Disease project. I build new models, run terabyte-scale data pipelines, produce data visualizations for presenting crucial results to senior leadership and key stakeholders, and publish articles in top-tier journals, such as _The Lancet_.
 
-I developed, integrated, and maintained IHME's first automated quality assurance pipeline, ensuring that estimates consistently achieve world-leading accuracy, rigor, and explainability, gaining recognition from senior leadership.
+I developed, integrated, and maintained IHME's first automated quality assurance pipeline, ensuring that estimates consistently achieve world-leading accuracy, rigor, and explain-ability, gaining recognition from senior leadership.
 
 I maintain several open-source Python packages for simulating complex systems and time-series analysis techniques.
 
