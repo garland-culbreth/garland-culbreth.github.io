@@ -28,7 +28,7 @@ The authors explored how this bias presented and how people responded when promp
 
 Ever since reading that article I try to catch myself when I think "what could I add that would fix this?" and try to remind myself to also think, "what could I remove that would fix this?" The bias to think first of adding things is tough to break.
 
-Solving a problem by removing parts requires understanding the problem more deeply. Why the is it a problem? What's the goal behind fixing it? What does fixing it even mean? Since LLMs have no comprehension, only statistical description, they respond to prompts with the statistically most likely output given the input and their training data. And since their training data come from humans, their training teaches them the human pattern of preferring to solve by adding. 
+Solving a problem by removing parts requires understanding the problem more deeply. Why is it a problem? What's the goal behind fixing it? What does fixing it even mean? Since LLMs have no comprehension, only statistical description, they respond to prompts with the statistically most likely output given the input and their training data. And since their training data come from humans, their training teaches them the human pattern of preferring to solve by adding. 
 
 It's possible to give an LLM a large body of material and have it generate a smaller, more condensed, more streamlined version of it. But to do that you must first realize that the material would be better if it were smaller. You must know that before you can tell the agents to do it. They won't do it when left to run on their own, especially not over time.
 
