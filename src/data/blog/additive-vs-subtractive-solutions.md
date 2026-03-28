@@ -24,7 +24,7 @@ The abstract explains:
 
 > We investigated whether people are as likely to consider changes that subtract components from an object, idea or situation as they are to consider changes that add new components. ... Here we show that people systematically default to searching for additive transformations, and consequently overlook subtractive transformations.
 
-The authors explored how this bias presented and how people responded when prompted differently or when the problems were posed under different conditions. When people were in a hurry, or had limited information, the additive preference became stronger. When people were promoted to take their time and think of different ways to solve the problem, they started to see subtractive solutions more. It's an excellent read.
+The authors explored how this bias presented and how people responded when prompted differently or when the problems were posed under different conditions. When people were in a hurry, or had limited information, the additive preference became stronger. When people were prompted to take their time and think of different ways to solve the problem, they started to see subtractive solutions more. It's an excellent read.
 
 Ever since reading that article I try to catch myself when I think "what could I add that would fix this?" and try to remind myself to also think, "what could I remove that would fix this?" The bias to think first of adding things is tough to break.
 
