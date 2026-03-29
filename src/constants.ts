@@ -1,10 +1,11 @@
 import type { Props } from "astro";
 import IconMail from "@/assets/icons/IconMail.svg";
 import IconGitHub from "@/assets/icons/IconGitHub.svg";
-import IconBsky from "@/assets/icons/IconBsky.svg";
 import IconLinkedin from "@/assets/icons/IconLinkedin.svg";
+import IconOrcid from "@/assets/icons/IconOrcid.svg";
 import IconWhatsapp from "@/assets/icons/IconWhatsapp.svg";
 import IconFacebook from "@/assets/icons/IconFacebook.svg";
+import IconBsky from "@/assets/icons/IconBsky.svg";
 import IconTelegram from "@/assets/icons/IconTelegram.svg";
 import { SITE } from "@/config";
 
@@ -27,6 +28,12 @@ export const SOCIALS: Social[] = [
     href: "https://www.linkedin.com/in/garland-culbreth",
     linkTitle: `${SITE.title} on LinkedIn`,
     icon: IconLinkedin,
+  },
+  {
+    name: "ORCiD",
+    href: "https://orcid.org/my-orcid?orcid=0000-0002-3096-4834",
+    linkTitle: `${SITE.title} on ORCiD`,
+    icon: IconOrcid,
   },
   {
     name: "Mail",
