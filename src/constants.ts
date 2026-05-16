@@ -31,7 +31,7 @@ export const SOCIALS: Social[] = [
   },
   {
     name: "ORCiD",
-    href: "https://orcid.org/orcid=0000-0002-3096-4834",
+    href: "https://orcid.org/0000-0002-3096-4834",
     linkTitle: `${SITE.title} on ORCiD`,
     icon: IconOrcid,
   },
