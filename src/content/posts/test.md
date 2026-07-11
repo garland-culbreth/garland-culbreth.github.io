@@ -5,7 +5,7 @@ modDatetime: 2026-07-10T23:15:00Z
 title: Test
 slug: test
 featured: false
-draft: true
+draft: false
 description:
   Test
 ---
