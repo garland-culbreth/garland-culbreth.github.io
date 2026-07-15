@@ -23,7 +23,7 @@ _A straight line on a log-log plot isn't sufficient to prove that data are power
 
 After seeing a straight line of a log-log histogram, researchers would then often perform a least-squares linear regression over the log-log plot to estimate the power law exponent. Clauset et al. explain that although this method dates back to the work of [Pareto](https://doi.org/10.1201/b18141), [Auerbach](https://www.vwl.uni-mannheim.de/media/Lehrstuehle/vwl/Ciccone/auerbach_1913_translated_with_introduction_March_2021.pdf), and [Zipf](https://archive.org/details/in.ernet.dli.2015.90211) it has a severe pitfall: when applied on log-log scale data the errors of a least-squares linear regression are systematically biased and non-Gaussian.
 
-_Even when the data are power law distributed, least-squares fitting isn't satisfactory for finding the power index_.
+_Even when the data are power law distributed, least-squares fitting isn't satisfactory for finding the scaling parameter_.
 
 It's also common for researchers plotting log-log histograms to simply log the axes and do nothing with the bin widths, resulting in bin widths that vary rather than bin edges spaced evenly in log scale. The varying bin widths further compound the problem for least-squared regression, as table 3.1 in the article illustrates.
 
@@ -32,7 +32,7 @@ Clauset et al. take twenty-four instances of reported power laws and reanalyze t
 The most important takeaways from the article are the points emphasized:
 
 1. _A straight line on a log-log plot isn't sufficient to prove that data are power law distributed_.
-2. _Even when the data are power law distributed, least-squares fitting isn't satisfactory for finding the power index_.
+2. _Even when the data are power law distributed, least-squares fitting isn't satisfactory for finding the scaling parameter_.
 
 In their article, Clauset et al. explain how to rigorously confirm whether data really follow a power law and how to robustly estimate the scaling parameter if it does. [Alstott, J., Bullmore, E., Plenz, D., 2014. powerlaw: A Python Package for Analysis of Heavy-Tailed Distributions. PLoS ONE 9, e85777.](https://doi.org/10.1371/journal.pone.0085777) ([arXiv](https://doi.org/10.48550/arXiv.1305.0215)) built on their work and published the [powerlaw Python package](https://github.com/powerlaw-devs/powerlaw), so the power law fitting and comparison methods established by Clauset et al. are easily accessible to everyone.
 
