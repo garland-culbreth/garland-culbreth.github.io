@@ -21,7 +21,7 @@ The article was motivated by an influx of statistical physics papers in the 1990
 
 _A straight line on a log-log plot isn't sufficient to prove that data are power law distributed_.
 
-After seeing a straight line of a log-log histogram, researchers would then often perform a least-squares linear regression over the log-log plot to estimate the power law exponent. Clauset et al. explain that although this method dates back to the work of [Pareto](https://doi.org/10.1201/b18141), [Auerbach](https://www.vwl.uni-mannheim.de/media/Lehrstuehle/vwl/Ciccone/auerbach_1913_translated_with_introduction_March_2021.pdf), and [Zipf](https://archive.org/details/in.ernet.dli.2015.90211) it has a severe pitfall: when applied on log-log scale data the errors of a least-squares linear regression are systematically biased and grow exponentially.
+After seeing a straight line of a log-log histogram, researchers would then often perform a least-squares linear regression over the log-log plot to estimate the power law exponent. Clauset et al. explain that although this method dates back to the work of [Pareto](https://doi.org/10.1201/b18141), [Auerbach](https://www.vwl.uni-mannheim.de/media/Lehrstuehle/vwl/Ciccone/auerbach_1913_translated_with_introduction_March_2021.pdf), and [Zipf](https://archive.org/details/in.ernet.dli.2015.90211) it has a severe pitfall: when applied on log-log scale data the errors of a least-squares linear regression are systematically biased and non-Gaussian.
 
 _Even when the data are power law distributed, least-squares fitting isn't satisfactory for finding the power index_.
 
