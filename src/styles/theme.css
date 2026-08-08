@@ -8,7 +8,7 @@
   --color-muted-foreground: var(--muted-foreground);
   --color-border: var(--border);
   --font-app: var(--font-sans);
-  --font-code: var(--font-code);
+  --font-code: var(--font-mono);
 }
 
 /* Light theme values */
