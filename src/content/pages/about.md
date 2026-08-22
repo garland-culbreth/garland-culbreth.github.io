@@ -7,7 +7,6 @@ title: "About"
 
 I graduated in 2021 with a PhD in theoretical physics from the University of North Texas, where I studied complex systems, stochastic processes, and nonlinear dynamics.
 
-
 I advanced and optimized entropy based time series analysis methods to study swarm intelligence and collective behavior, achieving a 100x efficiency increase over earlier prototypes while improving signal resolution.
 
 I built adaptive network models using reinforcement learning dynamics to simulate polarization and synchronization on networks experiencing information diffusion, and applied those models to study echo chamber formation and disruption strategies.
