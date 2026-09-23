@@ -37,7 +37,7 @@ reply
     reply
 ```
 
-Think about the achievement being dismissed here: Google DeepMind produced a machine learning model that was able to solve protein folding problems, one of the most important problems in modern science, the solving of which will be benefiting people the world over for decades or even longer. An achievement so great multiple people on the project were awarded Nobel prizes before they were in their fifties, because scientists immediately understood how monumental the achievement was and the impact it would have.
+Think about the achievement being dismissed here: Google DeepMind produced a machine learning model that was able to solve protein folding problems, one of the most important problems in modern science, the solving of which will be benefiting people the world over for decades or even longer. An achievement so great multiple people on the project were awarded Nobel prizes less than ten years after the model's first release, because scientists immediately understood how monumental the achievement was and the impact it would have.
 
 I guess A and C above think Hassabis worked on AlphaFold only because he wanted a Nobel prize. Maybe that was part of his motivation, what scientist wouldn't love to get a Nobel one day, but I believe Hassabis probably did it more for science than for personal glory. He would have known that the achievement would bring that anyway. Scientists believe that advancing human knowledge and understanding is a higher cause that scientists often consider its own reward. As most scientists know all too well, science doesn't always pay very much. But they do it anyway because they believe in science's benefit to humanity.
 
