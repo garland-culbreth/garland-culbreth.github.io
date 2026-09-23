@@ -41,7 +41,7 @@ Think about the achievement being dismissed here: Google DeepMind produced a mac
 
 I guess A and C above think Hassabis worked on AlphaFold only because he wanted a Nobel prize. Maybe that was part of his motivation, what scientist wouldn't love to get a Nobel one day, but I believe Hassabis probably did it more for science than for personal glory. He would have known that the achievement would bring that anyway. Scientists believe that advancing human knowledge and understanding is a higher cause that scientists often consider its own reward. As most scientists know all too well, science doesn't always pay very much. But they do it anyway because they believe in science's benefit to humanity.
 
-Shareholders like A and C don't believe in that. All the science humanity has ever done, all the discoveries, mean nothing to them but for their ability to generate returns. They would sell humanity if it made them a buck. Maybe that's why C believes Hassabis only worked on AlphaFold for personal gain: that's the only motivation C believes in.
+Shareholders like A and C don't believe in that. All the science humanity has ever done, all the discoveries, mean nothing to them but for their ability to generate some quick returns. It's not even a good trade either: there's no need to sacrifice long term returns for short, you can do both! Thinking is fast and slow. Thinking fast alone carries an opportunity cost too.
 
 In 1922 Apsley Cherry-Garrard, in [his memoir](https://www.gutenberg.org/files/14363/14363-h/14363-h.htm) of Captain Scott's tragic 1910-1913 Terra Nova Expedition to Antarctica, wrote of this same belief weighing on science back then too:
 
