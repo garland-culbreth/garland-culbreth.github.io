@@ -2,8 +2,8 @@
 author: Garland Culbreth
 pubDatetime: 2026-08-08T16:12:00Z
 modDatetime: 2026-08-08T16:12:00Z
-title: Dragon sickness
-slug: dragon-sickness
+title: Dragon blindness
+slug: dragon-blindness
 featured: false
 draft: false
 tags:
